@@ -1,0 +1,67 @@
+#title {
+    
+    padding: 0% 5%;
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+#about {
+    padding: 3% 5%;
+    background-color: #F3DFC1;
+    text-align: center;
+
+}
+
+#contact {
+    padding: 5% 15%;
+    text-align: center;
+    
+
+}
+
+#about h1 {
+    padding-top: 0;
+    margin-bottom: 70px;
+    font-weight: bold;
+
+}
+.colored-site {
+    background-color: #160F29;
+    color: white;
+
+}
+
+.my-picture {
+    border-radius: 70%;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.welcome-text h2{
+    
+    margin-top: 170px;
+}
+.welcome-text h1{
+    
+    margin-top: 100px;
+}
+
+.navbar-nav {
+    margin-left: 89%;
+    
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.fa-solid {
+    margin-bottom: 30px;
+}
+
+li span {
+    position: relative;
+    left: -10px;
+    text-align: left;
+  }
