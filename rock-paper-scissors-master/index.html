@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>ROCK PAPIER SCISSORS</title>
+</head>
+<body>
+    <header class="scoreboard">
+        <div class="text">
+            <h2>ROCK</h2>
+            <h2>PAPER</h2>
+            <h2>SCISSORS</h2>
+        </div>
+        <div class="img-score">
+            <p>Score</p>
+            <h2 class="score-actual">0</h2>
+         </div>
+    </header>
+    
+    <main>
+        <div class="all-buttons">
+            <div class="rock add-padding">
+                <button class=rock-button"><img src="C:\vscode\web_development\rock-paper-scissors\images\rock.png" alt="no-rock" class="rock-img"></button>
+            </div>
+            <div class="paper add-padding">
+                <button class="paper-button"><img src="C:\vscode\web_development\rock-paper-scissors\images\paper.png" alt="no-paper" class="rock-img"></button>
+            </div>
+            <div class="scissors add-padding">
+                <button class="scissors-button"><img src="C:\vscode\web_development\rock-paper-scissors\images\scissors.png" alt="no-scissors" class="src"></button>
+            </div>
+            <div class="lose-win">
+                <h2 id="who-won">
+
+                </h2>
+            </div>
+        </div>
+        <div class="button-try">
+            <button class="try-again">Try again</button>
+        </div>
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

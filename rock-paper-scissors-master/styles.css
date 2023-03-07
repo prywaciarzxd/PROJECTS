@@ -1,0 +1,168 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    background: radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+}
+
+
+
+.scoreboard {
+    
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-style: solid;
+    color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+
+
+}
+
+.scoreboard .text {
+    
+    align-items:flex-start;
+    padding-right: 50%;
+    font-weight: 700;
+
+}
+.scoreboard .img-score {
+   
+    align-items: flex-end;
+    font-weight: 300;
+
+}
+
+
+.all-buttons {
+
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px ;
+    gap: 12px;
+    
+}
+
+
+.rock-button {
+    border-radius: 100%;
+}
+
+.rock {
+
+    
+    grid-column: 5 / 10;
+    grid-row: 2;
+    width: 200px;
+
+}
+
+.rock:hover {
+    background-color: aqua;
+}
+
+.paper {
+    
+    grid-column: 4/ 10;
+    grid-row: 1;
+    width: 200px;
+}
+
+.paper:hover {
+    background-color: aqua;
+}
+
+.scissors {
+    
+    grid-column: 6 / 10;
+    grid-row: 1;
+    width: 200px;
+}
+
+.scissors:hover {
+    background-color: aqua;
+}
+
+.lose-win {
+    grid-column: 5 / 10;
+    grid-row: 3;
+}
+
+#who-won {
+    margin-top: 100px;
+    font-size: 4rem;
+    color: aliceblue;
+    
+}
+
+@media (max-width: 1000px) {
+    .all-buttons {
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    .scoreboard {
+        
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+       
+    
+    }
+}
+.button-try {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.try-again {
+    
+    margin-bottom: 50px;
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #0066CC;
+padding: 10px 30px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+    
+}
+.try-again:hover {
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+background-color: #fff;
+color: #0066cc;
+border: solid 2px #0066cc;
+}
+
+.after-click {
+    color: hsl(214, 47%, 23%);
+    background: radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+
+}
+
