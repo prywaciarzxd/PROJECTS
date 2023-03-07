@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log me in</title>
+    <script src="https://kit.fontawesome.com/47791b843d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <h1 class="brand-name">
+            Calculators
+        </h1>
+        <ul>
+            {% if not current_user.is_authenticated %}
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('register')}}">Register me in</a></li>
+                <li><a href="{{url_for('params')}}">Add body parameters</a></li>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('logout')}}">Log me out</a></li>
+                <li><a href="{{url_for('params')}}">Add body parameters</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="main-content-register">
+        <form action="{{url_for('login')}}" method="post">
+            <div class="whole">
+                <h1>LOGIN FORM</h1>
+                <div class="split">
+                    {{form.email.label}}{{ form.email }}
+                </div>
+                <div class="split">
+                    {{form.password.label}} {{ form.password }}
+                </div>
+                <div class="buttoniks">
+                    {{ form.submit }}
+                </div>
+            </div>
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+        
+    </div>
+    <footer class="contact-me">
+        <a href="www.twitter.com"> <i class="fa-brands fa-twitter fa-4x"></i></a>
+        <a href="www.facebook.com"><i class="fa-brands fa-facebook fa-4x"></i></a>
+        <a href="www.github.com"><i class="fa-brands fa-github fa-4x"></i></a>
+    </footer>
+    
+</body>
+</html>
