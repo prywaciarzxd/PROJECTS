@@ -19,12 +19,12 @@
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="{{url_for('register')}}">Register me in</a></li>
                 <li><a href="{{url_for('login')}}">Log me in</a></li>
-                <li><a href="{{url_for('params')}}">Add body parameters</a></li>
+                
             {% endif %}
             {% if current_user.is_authenticated %}
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="{{url_for('logout')}}">Log me out</a></li>
-                <li><a href="{{url_for('params')}}">Add body parameters</a></li>
+                <li><a href="{{url_for('add_food')}}">Add Food</a></li>
             {% endif %}
         </ul>
     </nav>

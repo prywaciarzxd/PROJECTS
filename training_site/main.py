@@ -94,9 +94,9 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-@app.route("/params")
-def params():
-    return '<h1>HELLO</h1>'
+@app.route("/add-food")
+def add_food():
+    return render_template("add-food.html")
 
 if __name__ == "__main__":
     app.run()

@@ -27,9 +27,6 @@ document.querySelector(".Metric-Units").addEventListener("click", function() {
 })
 
 
-
-
-
 clearButton.addEventListener("click", function(){
     for (var i = 0; i<inputs.length; i++) {
         inputs[i].value = ""
@@ -106,3 +103,4 @@ calculateButton.addEventListener("click", function() {
     }
 
 })
+

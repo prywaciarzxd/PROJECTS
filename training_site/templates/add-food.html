@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD CALORIES</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <h1 class="brand-name">
+            Calculators
+        </h1>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('logout')}}">Log me out</a></li>
+        </ul>
+    </nav>
+    <section class="main-section">
+        <div class="food-container">
+            <h2>Breakfast</h2>
+            <div class="normal">
+                <button href="">Add Food </button>
+                <button href="" id="quick-add">Quick add calories</button>
+            </div>
+            <h2>Lunch</h2>
+            <div class="normal">
+                <button href="">Add Food</button>
+                <button href="" id="quick-add">Quick add calories</button>
+            </div>
+            <h2>Dinner</h2>
+            <div class="normal">
+                <button href="">Add Food</button>
+                <button href="" id="quick-add">Quick add calories</button>
+            </div>
+            <h2>Snacks</h2>
+            <div class="normal">
+                <button href="">Add Food</button>
+                <button href="" id="quick-add">Quick add calories</button>
+            </div>
+        </div>
+        <div class="eaten-calories">
+            <div class="calories">
+                <div>Calories</div>
+                <div id="total-calories">0</div>
+            </div>
+            <div class="calories">
+                <div>Carbs</div>
+                <div>0</div>
+            </div>
+            <div class="calories">
+                <div>Fat</div>
+                <div>0</div>
+            </div>
+            <div class="calories">
+                <div>Protein</div>
+                <div>0</div>
+            </div>
+            <div class="calories">
+                <div>Fiber</div>
+                <div>0</div>
+            </div>
+            <div class="calories">
+                <div>Sugar</div>
+                <div>0</div>
+            </div>
+        </div>
+    </section>
+    <script src="static/add-calories.js"></script>
+</body>
+</html>
+
