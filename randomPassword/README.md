@@ -1,2 +1,5 @@
-RANDOM PASSWORD GENERATOR SITE WHERE U CAN CHOOSE PASSWORD LENGTH AND TYPE OF CHARACTERS!
+Random password generator site where you can choose parameters like:
+ - password length
+ - type of characters used to create password
+ 
 
