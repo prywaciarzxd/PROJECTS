@@ -2,6 +2,7 @@
 <html lang="en"></html>
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/47791b843d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>RANDOM PASSWORD GENERATOR</title>
 </head>
@@ -19,9 +20,12 @@
             <img src="password.png" alt="">
         </div>
         <h2>Create strong and secure password to keep your account safe online</h2>
-        <div>  
+        <div class="slider">  
             <label for="">Password length: </label>
-            <input type="text" id="password-length" name="password-length" class="password-length">
+            <span class="number"></span>
+            <button class="add"><i class="fa-solid fa-plus"></i></button>
+            <input type="range"  min="1" max="26" id="password-length" name="password-length" class="password-length">
+            <button class="sub"><i class="fa-solid fa-minus"></i></button>
         </div>
         <div>
             <label for="-">Characters used: </label>
@@ -38,6 +42,7 @@
         <div class="after-generate">
             <h1></h1>
         </div>
-        
+    
+    
     <script src="app.js"></script>
 </body>

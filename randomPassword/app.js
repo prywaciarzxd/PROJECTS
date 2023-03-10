@@ -1,6 +1,26 @@
 
 var passwordButton = document.querySelector(".generate-password")
+var passwordLength = parseInt(document.querySelector(".password-length").value)
 
+document.querySelector(".number").textContent = passwordLength
+
+document.querySelector(".add").addEventListener("click", function(){
+    passwordLength += 1
+    document.querySelector(".password-length").value = passwordLength
+    document.querySelector(".number").textContent = passwordLength
+    
+})
+document.querySelector(".sub").addEventListener("click", function() {
+    passwordLength -= 1
+    document.querySelector(".password-length").value = passwordLength
+    document.querySelector(".number").textContent = passwordLength
+    
+})
+
+document.querySelector(".password-length").addEventListener("click", function() {
+    passwordLength = parseInt(document.querySelector(".password-length").value)
+    document.querySelector(".number").textContent = passwordLength
+})
 
 passwordButton.addEventListener("click", function() {
     var allInputs = document.querySelectorAll("input");

@@ -48,8 +48,7 @@ ul {
 }
 
 .main-content button {
-    margin-left: 30%;
-    margin-right: 30%;
+    
     border-radius: 16px;
     border: solid 1px black;
     padding: 2% 2%;
@@ -68,4 +67,19 @@ ul {
 .after-generate h1:hover {
     color:aqua;
     cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+}
+
+.slider button {
+    outline: none;
+    border: none;
+    background-color: antiquewhite;
 }
