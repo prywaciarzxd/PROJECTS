@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>RANDOM PASSWORD GENERATOR</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <h1>RANDOM PASSWORD GENERATOR</h1>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">STORE</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <div>
+            <img src="password.png" alt="">
+        </div>
+        <h2>Create strong and secure password to keep your account safe online</h2>
+        <div>  
+            <label for="">Password length: </label>
+            <input type="text" id="password-length" name="password-length" class="password-length">
+        </div>
+        <div>
+            <label for="-">Characters used: </label>
+            <input type="checkbox" name="ABC" id="ABC">
+            <label for="ABC">ABC</label>
+            <input type="checkbox" name="abc" id="abc">
+            <label for="abc">abc</label>
+            <input type="checkbox" name="123" id="123">
+            <label for="123">123</label>
+            <input type="checkbox" name="#%&" id="#%&">
+            <label for="#%&">#%&</label>
+        </div>
+        <button class="generate-password">Generate password</button>
+        <div class="after-generate">
+            <h1></h1>
+        </div>
+        
+    <script src="app.js"></script>
+</body>
