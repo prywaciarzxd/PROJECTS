@@ -1,8 +1,8 @@
-// ustawienie początkowych wartości
 let score = 0;
 let highscore = 0;
 
-// pobranie elementów DOM
+let rightBigger = false;
+
 const leftSide = document.querySelector('.main-content-quiz .side:first-of-type');
 const leftImg = leftSide.querySelector('img');
 const leftName = leftSide.querySelector('h2');
@@ -16,69 +16,88 @@ const rightArea = rightSide.querySelector('h1');
 const scoreDisplay = document.querySelector('.score .score-normal');
 const highscoreDisplay = document.querySelector('.highscore .high-score');
 
-// pobranie danych z API
+
 async function getCountryData() {
-  const response = await fetch('https://restcountries.com/v3.1/all');
-  const data = await response.json();
-  return data;
+    const response = await fetch('https://restcountries.com/v3.1/all');
+    const data = await response.json();
+    return data;
 }
 
-// wylosowanie dwóch krajów
 async function setRandomCountries() {
-  const countries = await getCountryData();
-  const leftIndex = Math.floor(Math.random() * countries.length);
-  let rightIndex = Math.floor(Math.random() * countries.length);
+    const countries = await getCountryData();
+    var leftIndex = Math.floor(Math.random() * countries.length);
+    var rightIndex = Math.floor(Math.random() * countries.length);
 
-  // upewnienie się, że kraje są różne
-  while (rightIndex === leftIndex) {
-    rightIndex = Math.floor(Math.random() * countries.length);
-  }
 
-  const leftCountry = countries[leftIndex];
-  const rightCountry = countries[rightIndex];
-
-  // wyświetlenie informacji o krajach
-  leftImg.src = leftCountry.flags.png;
-  leftName.textContent = leftCountry.name.common;
-  leftArea.textContent = leftCountry.area.toLocaleString() + ' km²';
-
-  rightImg.src = rightCountry.flags.png;
-  rightName.textContent = rightCountry.name.common;
-  
-
-  // zapisanie poprawnej odpowiedzi
-  if (leftCountry.area > rightCountry.area) {
-    leftSide.dataset.bigger = true;
-  } else {
-    rightSide.dataset.bigger = true;
-  }
-}
-
-// sprawdzenie odpowiedzi
-function checkAnswer(e) {
-  const chosenSide = e.target.parentNode;
-  const chosenBigger = chosenSide.dataset.bigger;
-
-  if (chosenBigger === 'true') {
-    score++;
-    scoreDisplay.textContent = score;
-    if (score > highscore) {
-      highscore = score;
-      highscoreDisplay.textContent = highscore;
+    while (rightIndex === leftIndex) {
+        rightIndex = Math.floor(Math.random() * countries.length);
     }
-  } else {
-    score = 0;
-    scoreDisplay.textContent = score;
-  }
-  setRandomCountries();
-  
+
+    var leftCountry = countries[leftIndex]
+    var rightCountry = countries[rightIndex]
+
+    leftImg.src = leftCountry.flags.png;
+    leftName.textContent = leftCountry.name.common;
+    leftArea.textContent = leftCountry.area.toLocaleString() + ' km²';
+
+    rightImg.src = rightCountry.flags.png;
+    rightName.textContent = rightCountry.name.common;
+    
+
+    if (leftCountry.area > rightCountry.area) {
+        rightBigger = false;
+    }
+    else {
+        rightBigger = true;
+    }
+    
+    
+
 }
 
-// nasłuchiwanie na przyciski
-const buttons = document.querySelectorAll('.main-content-quiz button');
-buttons.forEach(button => {
-  button.addEventListener('click', checkAnswer);
-});
+function popUp(number) {
+    var popup = window.open("http://127.0.0.1:5555/templates/quiz1", "Answer", "width=200,height=200");
+    if (number === 0 ) {
+        popup.document.write(`You got it wrong!, your score is 0 now!, your highscore is equal to ${highscore}`)
+    }
+    setTimeout(function(){
+        popup.close();
+    }, 2000);
+}
 
-// wywołanie funkcji do losowania pierwszych krajów
-setRandomCountries();
+document.querySelector(".bigger").addEventListener("click", function() {
+    if (rightBigger) {
+        score++;
+        scoreDisplay.textContent = score;
+        if (score > highscore) {
+            highscore = score;
+            highscoreDisplay.textContent = highscore;
+        }
+    }
+    else {
+        score = 0;
+        scoreDisplay.textContent = score;
+        popUp(score)
+    }
+    
+    setRandomCountries()
+})
+
+document.querySelector(".smaller").addEventListener("click", function() {
+    if (rightBigger === false) {
+        score++;
+        scoreDisplay.textContent = score;
+        if (score > highscore) {
+            highscore = score;
+            highscoreDisplay.textContent = highscore;
+        }
+    }
+    else {
+        score = 0;
+        scoreDisplay.textContent = score;
+        popUp(score)
+    }
+    setRandomCountries()
+})
+
+setRandomCountries()
