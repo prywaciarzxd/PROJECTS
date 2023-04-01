@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #361134;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px white;
+    padding: 2% 0%;
+    margin-bottom: 60px;
+}
+
+.main-nav h1 {
+    font-size: 3rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items:center;
+    
+}
+
+.main-content .quizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+img {
+    max-width: 250px;
+}
+
+.main-content .quizes .quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 16px;
+    padding: 2% 2%;
+    border: solid 1px white;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.main-nav span {
+    color: #EA3788;
+}
+
+
+
+button {
+    background-color: white;
+    color: #361134;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #361134;
+    color: white;
+}
+
+.main-content .quizes .quiz:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* QUIZ STYLES */
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: solid 1px white;
+}
+
+.scores .flexing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-content-quiz {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: 40vh;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.side img {
+    width: 250px;
+    border-radius: 16px;
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+i {
+    background-color: white;
+    color: #EA3788;
+    
+}
