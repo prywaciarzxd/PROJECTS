@@ -1,0 +1,96 @@
+/* Resetowanie stylów dla przeglądarek */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Stylowanie głównego kontenera */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+  }
+  
+  /* Stylowanie kontenera kalkulatora */
+  .calculator-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .calculator-container button {
+    width: 100px;
+  }
+  
+  /* Stylowanie pola tekstowego */
+  .calculator-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+  }
+  
+  /* Stylowanie wierszy z przyciskami */
+  .calculator-container .one-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Stylowanie przycisków */
+  .calculator-container button {
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .calculator-container button:hover {
+    background-color: #ccc;
+  }
+  
+  /* Stylowanie przycisków operacji matematycznych */
+  .calculator-container .add {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  .calculator-container .multiply {
+    background-color: #27ae60;
+    color: #fff;
+  }
+  
+  .calculator-container .substract {
+    background-color: #c0392b;
+    color: #fff;
+  }
+  
+  .calculator-container .procent {
+    background-color: #2980b9;
+    color: #fff;
+  }
+  
+  .calculator-container .sqrt {
+    background-color: #8e44ad;
+    color: #fff;
+  }
+  
+  .calculator-container .equals {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .calculator-container .happy {
+    background-color: #f1c40f;
+    color: #fff;
+  }
+  
